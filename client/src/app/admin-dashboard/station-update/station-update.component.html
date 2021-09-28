@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s5">
+                        <form #stationForm="ngForm" (ngSubmit)="onSubmit(stationForm)">
+                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="stationService.selectedStation._id">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="stn" #name="ngModel" [(ngModel)]="stationService.selectedStation.stn" required>
+                                    <label>Station Name :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="stationName" #name="ngModel" [(ngModel)]="stationService.selectedStation.stnCode" required>
+                                    <label>station Code :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button class="btn btn-custom right" type="button" (click)="resetForm(stationForm)">Reset</button>
+                                    <button class="btn btn-custom right" type="submit" [disabled]="!stationForm.valid">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col s7">
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>Station Name</th>
+                                    <th>Station Code</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tr *ngFor="let station of stationService.stations">
+                                <td>{{station.stn}}</td>
+                                <td>{{station.stnCode}}</td>
+                                <td>
+                                    <a class="action-btn" (click)="onEdit(station)">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <a class="action-btn" (click)="onDelete(station._id,stationForm)">
+                                        <i class="material-icons">delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

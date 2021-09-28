@@ -1,0 +1,226 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s5">
+                        <form #trainForm="ngForm" (ngSubmit)="onSubmit(trainForm)">
+                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="trainService.selectedTrain._id">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="trainNo" #name="ngModel" [(ngModel)]="trainService.selectedTrain.trainNo" required>
+                                    <label>Train Number :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="trainName" #name="ngModel" [(ngModel)]="trainService.selectedTrain.trainName" required>
+                                    <label>Train Name :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="runsFromStn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.runsFromStn" required>
+                                    <label>Between Station :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="src" #name="ngModel" [(ngModel)]="trainService.selectedTrain.src" required>
+                                    <label>Source Station :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="srcCode" #name="ngModel" [(ngModel)]="trainService.selectedTrain.srcCode" required>
+                                    <label>Source Code :
+                      <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="dstn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.dstn" required>
+                                    <label>Destination Station:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="dstnCode" #name="ngModel" [(ngModel)]="trainService.selectedTrain.dstnCode" required>
+                                    <label>Destination Code:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="fromStn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.fromStn" required>
+                                    <label>From Station:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="fromStnCode" #name="ngModel" [(ngModel)]="trainService.selectedTrain.fromStnCode" required>
+                                    <label>From Stationn Code:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="toStn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.toStn" required>
+                                    <label>To Station:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="toStnCode" #name="ngModel" [(ngModel)]="trainService.selectedTrain.toStnCode" required>
+                                    <label>To Station Code:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="depAtFromStn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.depAtFromStn" required>
+                                    <label>Departure From Station:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="arrAtToStn" #name="ngModel" [(ngModel)]="trainService.selectedTrain.arrAtToStn" required>
+                                    <label>Arrival Station:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="travelTime" #name="ngModel" [(ngModel)]="trainService.selectedTrain.travelTime" required>
+                                    <label>Travel Time:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="trainType" #name="ngModel" [(ngModel)]="trainService.selectedTrain.trainType" required>
+                                    <label>Train type:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="AC1Tier" #name="ngModel" [(ngModel)]="trainService.selectedTrain.AC1Tier" required>
+                                    <label>AC1 Fare:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="AC2Tier" #name="ngModel" [(ngModel)]="trainService.selectedTrain.AC2Tier" required>
+                                    <label>AC2 Fare:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="sleeperClass" #name="ngModel" [(ngModel)]="trainService.selectedTrain.sleeperClass" required>
+                                    <label>Sleeper Class fare:
+                                    <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button class="btn btn-custom right" type="button" (click)="resetForm(trainForm)">Reset</button>
+                                    <button class="btn btn-custom right" type="submit" [disabled]="!trainForm.valid">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col s7">
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>Train number</th>
+                                    <th>Train name</th>
+                                    <th> RunsFromStn</th>
+                                    <th> Source Station</th>
+                                    <th> Source Code</th>
+                                    <th> Destination</th>
+                                    <th> Destination Code</th>
+                                    <th> From Station</th>
+                                    <th> From Station Code</th>
+                                    <th> To Station </th>
+                                    <th> To Station Code </th>
+                                    <th> Departure Time</th>
+                                    <th> Arrival Time</th>
+                                    <th> Travel Time</th>
+                                    <th> Train Type</th>
+                                    <th> AC1 Fare</th>
+                                    <th> AC2 Fare</th>
+                                    <th> Sleeper Fare</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tr *ngFor="let train of trainService.trains">
+                                <td>{{train.trainNo}}</td>
+                                <td>{{train.trainName}}</td>
+                                <td>{{train.runsFromStn}}</td>
+                                <td>{{train.src}}</td>
+                                <td>{{train.srcCode}}</td>
+                                <td>{{train.dstn}}</td>
+                                <td>{{train.dstnCode}}</td>
+                                <td>{{train.fromStn}}</td>
+                                <td>{{train.fromStnCode}}</td>
+                                <td>{{train.toStn}}</td>
+                                <td>{{train.toStnCode}}</td>
+                                <td>{{train.depAtFromStn}}</td>
+                                <td>{{train.arrAtToStn}}</td>
+                                <td>{{train.travelTime}}</td>
+                                <td>{{train.trainType}}</td>
+                                <td>{{train.AC1Tier}}</td>
+                                <td>{{train.AC2Tier}}</td>
+                                <td>{{train.sleeperClass}}</td>
+                                <td>
+
+
+                                    <a class="action-btn" (click)="onEdit(train)">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <a class="action-btn" (click)="onDelete(train._id,trainForm)">
+                                        <i class="material-icons">delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

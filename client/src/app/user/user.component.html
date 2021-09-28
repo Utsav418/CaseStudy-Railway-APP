@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top justify-content-between">
+    <a class="navbar-brand" href="#">
+        <!-- <img src="../../assets/irctc_logo.png" width="auto" height="30" class="d-inline-block align-top" alt="bluebox-logo"> -->
+        <font color="#FF0000"><strong> R~Reservation System </strong></font> | e-Ticketing System.
+    </a>
+
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Hello {{user}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="right: 0; left: auto;">
+            <a class="dropdown-item" routerLink="/user/profile" routerLinkActive="active">View Profile</a>
+            <a class="dropdown-item" (click)='logout()'> Sign Out</a>
+        </div>
+    </li>
+</nav>
+<div class="dashboard-content">
+    <div class="row">
+        <div class="col-3 nav-panel">
+            <app-navpanel></app-navpanel>
+        </div>
+        <div class="col-9 route-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Backend connections with mongodb and restful services.",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "mocha --timeout 10000"
+    },
+    "author": "Utsav Kumar",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
+        "cors": "^2.8.5",
+        "express": "^4.16.3",
+        "jsonwebtoken": "^8.2.0",
+        "mocha": "^9.1.1",
+        "mongoose": "^5.0.11",
+        "razorpay": "^2.0.7",
+        "twilio": "^3.14.0",
+        "vynl": "^0.1.0"
+    },
+    "devDependencies": {
+        "should": "^13.2.3"
+    }
+}

@@ -1,0 +1,60 @@
+<!-- <h1>Only Authorized Admin can see this</h1> -->
+<nav class="navbar fixed-top justify-content-between">
+    <a class="navbar-brand" href="#">
+        <!-- <img src="../../assets/irctc_logo.png" width="auto" height="30" class="d-inline-block align-top" alt="bluebox-logo"> -->
+        <font color="#FF0000"><strong>R~Reservation System </strong></font> | e-Ticketing System.
+    </a>
+
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Hello Admin {{admin}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="right: 0; left: auto;">
+            <a class="dropdown-item" routerLink="/admin/profile" routerLinkActive="active"><i class="material-icons">settings</i> View Profile</a>
+            <a class="dropdown-item" (click)='logout()'><i class="material-icons">power_settings_new</i>  Sign Out</a>
+        </div>
+    </li>
+</nav>
+<div class="dashboard-content">
+    <div class="row">
+        <!-- <div class="col-3 nav-panel">
+            <app-navpanel></app-navpanel>
+        </div> -->
+        <div class="hamburger-parent">
+            <div class="welcome-note">
+                <img src="../../assets/irctc_logo.png" width="auto" height="100" style="margin-bottom: 18px; margin-top: 8px;" class="d-inline-block align-top" alt="irctc-logo">
+                <p style="font-size: 1.4em; font-weight: 100;"> Welcome Administrator </p>
+            </div>
+            <div class="navigation">
+                <ul class="nav flex-column">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/trainsnow" routerLinkActive="active"><i class="material-icons">notifications</i>Update Train Schedule</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/trainsnow" routerLinkActive="active"><i class="material-icons">account_circle</i> Update Trains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/stationUpdate" routerLinkActive="active"><i class="material-icons">account_circle</i> Update Stations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/profile" routerLinkActive="active"><i class="material-icons">account_circle</i> Manage Admin Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/bookingVerification" routerLinkActive="active"><i class="material-icons">notifications</i> Booking Verifications</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/notifications" routerLinkActive="active"><i class="material-icons">notifications</i> Admin Notifications</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-9 route-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
